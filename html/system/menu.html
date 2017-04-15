@@ -1,0 +1,46 @@
+<md-content layout="row" flex>
+	<!--OPTIONS-->
+	<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="options" md-is-locked-open="$mdMedia('gt-sm')" layout="column">
+		<md-toolbar ng-class="{'md-hue-2':$mdMedia('gt-sm')}">
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" hide-gt-sm ng-click="toggleSidenav('options')">
+					<md-icon class="material-icons">menu</md-icon>
+				</md-button>
+				<h2>
+					<span>Opciones</span>
+				</h2>
+			</div>
+		</md-toolbar>
+		<md-content>
+				<div>
+					<md-subheader class="md-no-sticky md-accent">Área</md-subheader>
+					<md-input-container layout-margin class="md-block">
+						<md-select ng-model="area" placeholder="Área" md-on-close="changeArea()">
+							<md-option ng-repeat="area in areas | orderBy:'name'" ng-value="area" ng-selected="area.id == session.area.id">{{area.name}}</md-option>
+						</md-select>
+					</md-input-container>
+				</div>
+	      		<div ng-repeat="category in categories | orderBy: 'order'">
+					<md-subheader class="md-no-sticky md-accent">{{category.name}}</md-subheader>
+					<md-list>
+						<md-list-item ng-click="changeModule(imodule)" ng-disabled="!imodule.active" ng-repeat="imodule in category.modules | orderBy: 'order'">
+							<p>{{imodule.name}}</p>
+							<md-icon class="md-accent">{{(module.id == imodule.id)? 'chevron_right':''}}</md-icon>	
+						</md-list-item>
+					</md-list>
+				</div>
+				<div>
+					<md-subheader class="md-no-sticky md-accent">Salir</md-subheader>
+					<md-list>
+						<md-list-item ng-click="doLogout()">
+							<p>Cerrar sesión</p>
+						</md-list-item>
+					</md-list>
+				</div>
+		</md-content>
+	</md-sidenav>
+	<!--CONTENT-->
+	<md-content layout="column" flex style="position:relative;">
+		<md-content layout="column" class="fade" flex ng-view ng-if="loadComplete"></md-content>
+	</md-content>
+</md-content>

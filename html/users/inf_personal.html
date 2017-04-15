@@ -1,0 +1,172 @@
+
+<md-content ng-controller="userPersonalController" layout="column" flex>
+	<md-toolbar layout="row" class="m-accent md-hue-2">
+		<div class="md-toolbar-tools">
+			<md-button class="md-class-button" title="Regresar" ng-click="back()">
+				<md-icon class="material-icons">arrow_back</md-icon>
+			</md-button>
+			<h2><span>Registro</span></h2>
+			<span flex></span>
+			<md-button class="md-icon-button" title="Deshacer" > 
+				<md-icon class="material-icon">undo</md-icon>
+			</md-button>
+			<md-button class="md-icon-button" title="Siguiente"> 
+				<md-icon class="material-icon">arrow_forward</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<!--CONTENT-->
+	<md-content layout-padding>
+		<form name="personalForm" layout-padding autocomplete="false">
+			-Datos Personales-<br>
+			<md-input-container class="md-block md-accent">
+				<label>Nombres</label>
+				<input type="text" name="userName" ng-required="true" ng-minlength="3"/>
+				<ng-messages for="personalForm.userName.$error" ng-if="personalForm.userName.$dirty">
+					<ng-message when="required">El campo es obligatorio</ng-message>
+					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container class=" md-block md-accent">
+				<label>Apellido Paterno</label>
+				<input type="text" name="userLastNameP" ng-required="true" ng-minlength="3"/>
+				<ng-messages for="personalForm.userLastNameP.$error" ng-if="personalForm.userLastNameP.$dirty">
+					<ng-message when="required">El campo es obligatorio</ng-message>
+					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container class=" md-block md-accent">
+				<label>Apellido Materno</label>
+				<input type="text" name="userLastnNameM" ng-required="true" ng-minlength="3"/>
+				<ng-messages for="personalForm.userLastNameM.$error" ng-if="personalForm.userLastNameM.$dirty">
+					<ng-message when="required">El campo es obligatorio</ng-message>
+					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-contatiner>
+			<label>Fecha de Nacimiento*:</label>
+				<input type="date" ng-required="true" name="birthDate"/>
+				<ng-messages for="personalForm.birthDate.$error" ng-if="personalForm.birthDate.$dirty">	
+					<ng-message when="required">El campo es oblicatori</ng-message>
+				</ng-messages>
+			</md-input-contatiner>
+			<br><br>
+
+			<md-input-container>
+				<label>Edad*:</label>
+				<input type="number" name="userAge" ng-required="true"/>
+				<ng-messages for="personalForm.userAge.$error" ng-if="personalForm.userAge.$dirty">	
+					<ng-message when="required">El campo es oblicatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Estatura</label>
+				<input type="number" name="userHeight" ng-required="true"/>
+				<ng-messages for="personalForm.userHeight.$error" ng-if="personalForm.userHeight.$dirty">	
+					<ng-message when="required">El campo es oblicatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Peso</label>
+				<input type="number" name="userWeight" ng-required="true"/>
+				<ng-messages for="personalForm.userWeight.$error" ng-if="personalForm.userWeight.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<!--User Email-->
+			<md-input-container>
+				<label>Email</label>
+				<input type="email" name="userEmail" ng-required="true"/>
+				<ng-messages for="personalForm.userEmail.$error" ng-if="personalForm.userEmail.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>No. de Hermanos en el club</label>
+				<input type="number" name="userSiblings" ng-required="true"/>
+				<ng-messages for="personalForm.userSiblings.$error" ng-if="personalForm.userSiblings.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<!--User Address-->
+			<br>Domicilio del Jugador<br>
+			<md-input-container class="md-block md-accent">
+				<label>Calle N°</label>
+				<input type="text" name="userStreet" ng-required="true"/>
+				<ng-messages for="personalForm.userStreet.$error" ng-if="personalForm.userStreet.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container class="md-block md-accent">
+				<label>Colonia</label>
+				<input type="text" name="userCounty" ng-required="true"/>
+				<ng-messages for="personalForm.userCounty.$error" ng-if="personalForm.userCounty.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Municipio o Delegación</label>
+				<input type="text" name="userMunicipio" ng-required="true"/>
+				<ng-messages for="personalForm.userMunicipio.$error" ng-if="personalForm.userMunicipio.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Estado</label>
+				<input type="text" name="userState" ng-required="true"/>
+				<ng-messages for="personalForm.userState.$error" ng-if="personalForm.userState.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>CP</label>
+				<input type="number" name="userCP" ng-required="true"/>
+				<ng-messages for="personalForm.userCP.$error" ng-if="personalForm.userCP.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<!--User Cellphone-->
+			<br>Teléfonos<br>
+			<md-input-container>
+				<label>Teléfono Particular</label>
+				<input type="number" name="userPhoneP" ng-required="true"/>
+				<ng-messages for="personalForm.userPhoneP.$error" ng-if="personalForm.userPhoneP.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Teléfono Movil</label>
+				<input type="number" name="userPhoneM" ng-required="true"/>
+				<ng-messages for="personalForm.userPhoneM.$error" ng-if="personalForm.userPhoneM.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<!--User School Information-->
+			<br>Escuela<br>
+			<md-input-container>
+				<label>Nombre de la Escuela</label>
+				<input type="text" name="userSchool" ng-required="true"/>
+				<ng-messages for="personalForm.userSchool.$error" ng-if="personalForm.userSchool.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Grado</label>
+				<input type="text" name="userGrade" ng-required="true"/>
+				<ng-messages for="personalForm.userGrade.$error" ng-if="personalForm.userGrade.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Promedio</label>
+				<input type="number" name="userAverage" ng-required="true"/>
+				<ng-messages for="personalForm.userAverage.$error" ng-if="personalForm.userAverage.$dirty">	
+					<ng-message when="required">El campo es oblicatorio ¿</ng-message>
+				</ng-messages>
+			</md-input-container>
+		</form>	
+	</md-content>
+	<md-button class="md-fab md-raised" title="Principio de Pag." >
+			<md-icon class="material-icon" sytle="color:redlight">keyboard_arrow_up</md-icon>
+	</md-button>
+</md-content>

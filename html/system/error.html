@@ -1,0 +1,23 @@
+<md-content>
+  <!--Error Toolbar-->
+  <md-toolbar layout="row" class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <md-button arial-label="atrás" class="md-icon-button" ng-click="back()">
+      <md-icon class="material-icons"> arrow_back</md-icon>
+    </md-button>
+      <h2>
+        <span>¡Error!</span>
+      </h2>
+    </div>
+  </md-toolbar>
+  <!--Module Conetnt-->
+  <div  layout="column" layout-align="center center" ng-style="{'margin-top':'70px'}">
+    <span ng-style="{'font-size':'25px', 'text-align':'center'}">
+      <b >Página no encontrada, </b>permisos denegados, de click en el ícono para volver
+    </span>
+    <img src="images/error.jpg" class="md-card-image" alt="Washed Out">
+    <md-button arial-label="atrás" class="md-icon-button" ng-click="back()" ng-style="{height:'95px', width:'100px'}">
+      <md-icon class="material-icons" ng-style="{'font-size':'70px',color:'#10AC56', height:'65px', width:'70px'}"> arrow_back</md-icon>
+    </md-button>
+  </div>
+</md-content>

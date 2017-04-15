@@ -1,0 +1,31 @@
+<md-content ng-controller='meanController' >
+	<div layout="row" layout="row" layout-align="start start" >
+		<img flex="33" ng-src="images/LogoTribuna.jpg" style=" width:200px; height:100px;">
+		<section  flex="33" layout="column" layout-xl="column" layout-align="center center" layout-wrap="">
+			<span class="md-title">Club Naucalpan FootBall, A.C.</span>
+			<span class="md-subhead ">Perros Negros</span>
+			<span class="md-subsubhead">Más de 40 años formando ciudadanos deportistas</span>
+		</section>
+		<img flex="33" ng-src="images/Slogan.jpg" style="width:300px; height:100px;">
+	</div>
+	<md-nav-bar  md-selected-nav-item="title" nav-bar-aria-label="navigation links">
+		<md-nav-item  flex ="25" md-nav-click="goto('¿Quiénes Somos?')" name="¿Quiénes Somos?">
+	    	¿Quiénes Somos?
+	    </md-nav-item>
+	    <md-nav-item  flex="20" md-nav-click="goto('Contáctanos')" name="Contáctanos">
+	    	Contáctanos
+	    </md-nav-item>
+	    <md-nav-item  flex="20" md-nav-click="goto('Categorias')" name="Categorias">
+	    	Categorias
+	    </md-nav-item>
+	    <md-nav-item  flex="25" md-nav-click="goto('Aviso de Privacidad')" name="Aviso de Privacidad">
+	    	Aviso de Privacidad
+	    </md-nav-item>
+	    <md-nav-item flex="10" md-nav-click="goto('login')" name="Login">
+	    	<md-icon class="material-icons">account_circle</md-icon>
+	    </md-nav-item>
+	</md-nav-bar>
+	<div class="ext-content">
+		<span>{{title}}</span>
+	</div>
+</md-content>	

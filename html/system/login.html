@@ -1,0 +1,33 @@
+<md-content layout="column" layout="column" flex layout-align-xl="center center" layout-align="start center">
+	<md-card>
+		<md-toolbar class="md-hue-2">
+			<div class="md-toolbar-tools">
+				<h2>
+					<span>Inicio de sesión</span>
+				</h2>
+ 			</div>
+		</md-toolbar>
+		<md-card-content>
+			<img ng-src="images/cascoPN.jpg" class="md-card-image" alt="Washed Out" style="width:400px; height:400px;">
+			<form name="loginForm" layout-gt-md="row" novalidate="true">
+				<md-input-container flex >
+					<label>Usuario</label>
+					<input ng-model="login.user" name="user" type="text" ng-required="true"/>
+						<ng-messages for="loginForm.user.$error" ng-show="loginForm.user.$touched">
+						<ng-message when="required">Este campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container flex>
+					<label>Contraseña</label>
+					<input ng-model="login.password" name="password" type="password" ng-required="true"/>
+					<ng-messages for="loginForm.password.$error" ng-show="loginForm.password.$touched">
+						<ng-message when="required">Este campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<div class="md-actions" ng-disabled="!loginForm.$valid" layout="column" layout-align="end center">
+					<md-button class="md-primary" ng-click="doLogin()">Entrar</md-button>
+				</div>
+			</form>
+		</md-card-content>
+	</md-card>
+</md-content>

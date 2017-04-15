@@ -1,0 +1,100 @@
+<md-content ng-controller="userMedicoController" layout="column" flex>
+	<md-toolbar layout="row" class="m-accent md-hue-2">
+		<div class="md-toolbar-tools">
+			<md-button class="md-class-button" title="Regresar" ng-click="back()">
+				<md-icon class="material-icons">arrow_back</md-icon>
+			</md-button>
+			<h2><span>Registro</span></h2>
+			<span flex></span>
+			<md-button class="md-icon-button" title="Deshacer" ng-click="refresh()"> 
+				<md-icon class="material-icon">undo</md-icon>
+			</md-button>
+			<md-button class="md-icon-button" title="Siguiente" ng-click="next()"> 
+				<md-icon class="material-icon">arrow_forward</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<!--CONTENT-->
+	<md-content layout-padding>
+		<form name="medicForm" layout-padding autocomplete="false">
+			<span>-Reporte Médico-</span><br>
+			<md-input-container>
+				<label>Tipo de Seguro:</label>
+				<md-select ng-model="insurance">
+					<!--<md-option><em>NA</em></md-option>-->
+					<md-option ng-repeat="insurance in insurances" value={{insurance.name}}>{{insurance.name}}</md-option>
+				</md-select>	
+				<!--<md-select ng-model="insurances"  placeholder="Seguro">
+					<md-option ng-value="insurance" ng-repeat="insurance in insurances">{{insurance.name}}</md-option>
+				</md-select>-->
+			</md-input-container>
+			<md-input-container class="md-block md-accent">
+				<label>Médico Familiar </label>
+				<input type="text" name="userDoctor" ng-required="true"/>
+				<ng-messages for="medicForm.userDoctor.$error" ng-if="medicForm.userDoctor.$dirty"> 
+					<ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Teléfono del médico</label>
+				<input type="text" name="doctorPhone" />
+			</md-input-container>
+			<md-input-container>
+				<label>No de Póliza de seguro </label>
+				<input type="text" name="insurancePolicy" ng-required="true"/>
+				<ng-messages for="medicForm.insurancePolicy.$error" ng-if="medicForm.insurancePolicy.$dirty">
+					 <ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Aseguradora </label>
+				<input type="text" name="insuranceCarrier" ng-required="true"/>
+				<ng-messages for="medicForm.insuranceCarrier.$error" ng-if="medicForm.insuranceCarrier.$dirty"> 
+					<ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<br>Perfil Médico<br>
+			<md-input-container>
+				<label>Grupo Sanguineo y RH </label>
+				<input type="text" name="userRH" ng-required="true"/>
+				<ng-messages for="medicForm.userRH.$error" ng-if="medicForm.userRH.$dirty"> 
+					<ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Alergias </label>
+				<input type="text" name="userAllergies" ng-required="true"/>
+				<ng-messages for="medicForm.userAllergies.$error" ng-if="medicForm.userAllergies.$dirty">
+					 <ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Lesiones previas </label>
+				<input type="text" name="userInjuries" ng-required="true"/>
+				<ng-messages for="medicForm.userInjuries.$error" ng-if="medicForm.userInjuries.$dirty">
+					 <ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container>
+				<label>Procedimientos Actuales</label>
+				<input type="text" name="userProcedures" />
+			</md-input-container>
+			<md-input-container>
+				<label>Medicación Actual</label>
+				<input type="text" name="userMedication"/>
+			</md-input-container>
+			<md-input-container>
+				<label>¿El aspirante lleva consigo su medicamento y sabe cómo suministrarselo?:</label>
+				<md-select ng-model="med" >
+					<md-option value={{med.name}} ng-repeat="med in medicin">{{med.name}}</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container>
+				<label>El aspirante usa:</label>
+				<md-select ng-model="nece" placeholder="Tipo de Necesidad" multiple>
+					<md-option value={{nece.name}} ng-repeat="nece in necessities">{{nece.name}}</md-option>
+				</md-select>
+			</md-input-container>
+		</form>
+	</md-content>
+</md-content>

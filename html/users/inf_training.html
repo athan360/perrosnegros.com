@@ -1,0 +1,55 @@
+<md-content  ng-controller="userTrainingController" layout="column" flex>
+	<md-toolbar layout="row" class="m-accent md-hue-2">
+		<div class="md-toolbar-tools">
+			<md-button class="md-class-button" title="Regresar">
+				<md-icon class="material-icons">arrow_back</md-icon>
+			</md-button>
+			<h2><span>Registro</span></h2>
+			<span flex></span>
+			<md-button calss="md-icon-button" title="Enviar"><!--ng-if="valid"-->
+				<md-icon class="material-icons">done</md-icon>
+			</md-button>
+			<md-button class="md-icon-button" title="Deshacer" > 
+				<md-icon class="material-icon">undo</md-icon>
+			</md-button>
+			<md-button class="md-icon-button" title="Siguiente"> 
+				<md-icon class="material-icon">arrow_forward</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<!--CONTENT-->
+	<md-content layout-padding>
+		<form name="trainForm" layout-padding autocomplete="false">
+			<span>Experiencia Deportiva</span><br>
+			<md-input-container class="md-block">
+				<md-select ng-model="sport" placeholder="Experiencia" ng-model-options="{trackBy:'$value.id'}">
+					<md-option ng-value="spot" ng-repeat="spot in sport">{{spot.name}}</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container>		
+				<label>Años</label>
+				<input type="number" name="userYearsPlaying">
+			</md-input-container>
+			<md-input-container>		
+				<label>Equipo</label>
+				<input type="text" name="userTeam">
+			</md-input-container>
+			<br>Inscripción<br>
+			<md-input-container>		
+				<label>Temporada</label>
+				<input type="text" name="userTemp" ng-required="true">
+				<ng-messages for="trainForm.userTemp.$error" ng-if="trainForm.userTemp.$dirty"> 
+					<ng-message when="required">El campo es obligatorio</ng-message>
+				</ng-messages>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<md-select ng-model="categories" placeholder="Categoria" ng-model-options="{trackBy:'$value.id'}">
+					<md-option ng-value="cat" ng-repeat="cat in categories">{{cat.name}}</md-option>
+				</md-select>
+			</md-input-container>
+		</form>
+	</md-content>
+	<div>
+		ENVIA EL FORMULARIO PARA TERMINAR EL TRÁMITE.
+	</div>
+</md-content>

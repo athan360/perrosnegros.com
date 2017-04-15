@@ -1,0 +1,6 @@
+<md-content flex>
+	<div flex="100" layout-align="center center" layout="column">
+		<h3>{{progress.percent != 100? 'Cargando':'¡Listo!'}}</h3>
+		<md-progress-circular md-mode="determinate" value="{{progress.percent}}"></md-progress-circular>
+	</div>
+</md-content>

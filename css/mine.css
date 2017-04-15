@@ -1,0 +1,142 @@
+.RecursiveList{
+	border-left: solid 1px rgba(0,0,0,0.12);
+	margin: 0px 0px 0px 10px;
+}
+
+.RecursiveOptions{
+	padding: 0px 10px 0px 0px;
+}
+
+.FloatingButton{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+.PreviewContent{
+	padding: 0%;
+	position: relative;
+}
+
+.PreviewIFrame{
+	border: none;
+	min-width: 100%;
+	height: 100%;
+}
+
+.BlockPreviewButton{
+	background: black;
+	position: absolute;
+	top: -4px;
+	right: -1px;
+	width: 67px;
+	height: 51px;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+.BlockPreviewButton:hover{
+	opacity: 0.5
+}
+
+.SubOption{
+    margin-left: 15px;
+    border-left: #ddd solid 1px;
+}
+
+md-input-container{
+	outline: none !important;
+}
+
+.SearchContent{
+	padding: 55px 0px 0px 0px;
+}
+
+.SearchContentBig{
+	margin: 60px 0px 0px 0px;
+}
+
+.sys-justify{
+	text-align: justify;
+}
+
+.sys-lower-case{
+	text-transform: lowercase !important;
+}
+
+.sys-floating-button{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.sys-list-border{
+	border-left: double 4px #aaa;
+}
+
+.sys-text-left{
+	text-align: left;
+}
+
+.sys-text-right{
+	text-align: right;
+}
+
+.sys-virtual-content{
+	height: 80%;
+}
+
+
+/**EFFECT**/
+
+.fade{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.fade.ng-enter{
+    -webkit-transition: all 500ms ease;
+    transition: all 1000ms ease;
+}
+.fade.ng-leave {
+    -webkit-transition: all 500ms ease;
+    transition: all 1000ms ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+/*.section{
+	background-color:#D3DCD4;
+}*/
+.btn1{
+	background-color: #F43333;
+	border: none;
+	box-shadow: none;
+	padding-right: 50px;
+	padding-left:50px;
+}
+.meanModule md-content .ext-content{
+  padding: 200px;
+  margin: 100px;
+  background-color: #1FBD1C;
+}
+/*Angular Styles*/
+md-tooltip {
+	font-size: 15px !important;
+	padding: 3px;
+}
+md-input-container label, md-input-container .md-placeholder {
+	color: rgba(0, 0, 0, 0.4) !important;
+}
