@@ -8,7 +8,7 @@
 		return{
 			restrict:'E',
 			replace:true,
-			templateUrl:'html/users/medico.html',
+			templateUrl:'html/users/parents.html',
 			controller: 'userPersonalController'
 		};
 	})
