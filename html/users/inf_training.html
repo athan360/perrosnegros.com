@@ -9,12 +9,12 @@
 			<md-button calss="md-icon-button" title="Enviar"><!--ng-if="valid"-->
 				<md-icon class="material-icons">done</md-icon>
 			</md-button>
-			<md-button class="md-icon-button" title="Deshacer" > 
+			<md-button class="md-icon-button" title="Deshacer" ng-click="reset(trainForm)"  tipe="reset">  <!-- Athan: modifique ng-click="reset" y agregue el tipe="reset" modificado el 15 abril  23:50 -->
 				<md-icon class="material-icon">undo</md-icon>
 			</md-button>
-			<md-button class="md-icon-button" title="Siguiente"> 
+			<!--<md-button class="md-icon-button" title="Siguiente"> 
 				<md-icon class="material-icon">arrow_forward</md-icon>
-			</md-button>
+			</md-button>-->
 		</div>
 	</md-toolbar>
 	<!--CONTENT-->
@@ -22,29 +22,29 @@
 		<form name="trainForm" layout-padding autocomplete="false">
 			<span>Experiencia Deportiva</span><br>
 			<md-input-container class="md-block">
-				<md-select ng-model="sport" placeholder="Experiencia" ng-model-options="{trackBy:'$value.id'}">
-					<md-option ng-value="spot" ng-repeat="spot in sport">{{spot.name}}</md-option>
+				<md-select ng-model="spot" placeholder="Experiencia" >
+					<md-option value={{spot.name}} ng-repeat="spot in sport">{{spot.name}}</md-option>
 				</md-select>
 			</md-input-container>
 			<md-input-container>		
 				<label>Años</label>
-				<input type="number" name="userYearsPlaying">
+				<input ng-model="user.yearsplaying" type="number" name="userYearsPlaying">
 			</md-input-container>
 			<md-input-container>		
 				<label>Equipo</label>
-				<input type="text" name="userTeam">
+				<input ng-model="user.team" type="text" name="userTeam">
 			</md-input-container>
 			<br>Inscripción<br>
 			<md-input-container>		
 				<label>Temporada</label>
-				<input type="text" name="userTemp" ng-required="true">
+				<input ng-model="user.temp" type="text" name="userTemp" ng-required="true">
 				<ng-messages for="trainForm.userTemp.$error" ng-if="trainForm.userTemp.$dirty"> 
 					<ng-message when="required">El campo es obligatorio</ng-message>
 				</ng-messages>
 			</md-input-container>
 			<md-input-container class="md-block">
-				<md-select ng-model="categories" placeholder="Categoria" ng-model-options="{trackBy:'$value.id'}">
-					<md-option ng-value="cat" ng-repeat="cat in categories">{{cat.name}}</md-option>
+				<md-select ng-model="cat" placeholder="Categoria" >
+					<md-option value={{cat.name}} ng-repeat="cat in categories">{{cat.name}}</md-option>
 				</md-select>
 			</md-input-container>
 		</form>

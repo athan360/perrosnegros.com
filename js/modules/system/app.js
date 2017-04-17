@@ -47,7 +47,6 @@
 			template: '<error-directive></error-directive>'
 		})
 		//**************USERS******************
-		
 		.when('/personal/',{
 			template:'<personal-directive></personal-directive>'
 		})

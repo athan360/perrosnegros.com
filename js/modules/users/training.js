@@ -36,5 +36,14 @@
 			{id:6, name:'Tauros'},
 			{id:7, name:'Ponys'}
 		];
+		//funcion de reset
+		$scope.reset = function(form) {
+			$scope.user = {};
+			if (form) {
+				form.$setPristine();
+				form.$setUntouched();
+			}
+        };
+		$scope.reset();
 	});
 })();

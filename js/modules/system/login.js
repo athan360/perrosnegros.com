@@ -70,7 +70,7 @@
 				callback();
 			}
 		};
-		/******************DIRECTIVE fkajfljdns******************/
+		/******************DIRECTIVE******************/
 		//Return the directive
 		return {
 			restrict: 'E',
@@ -85,11 +85,7 @@
 					'html/system/dashboard.html',
 					'html/system/error.html',
 					'html/system/mean.html',
-					'html/system/menu.html',
-					'html/users/inf_personal.html',
-					'html/users/inf_training.html',
-					'html/users/medico.html',
-					'html/users/parents.html'
+					'html/system/menu.html'
 
 				];
 				//Get all the files to the templateCache

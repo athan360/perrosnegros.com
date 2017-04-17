@@ -1,132 +1,142 @@
-<md-content  layout="column" flex>
-	<md-toolbar layout="row" class="m-accent md-hue-2">
-		<div class="md-toolbar-tools">
-			<md-button class="md-class-button" title="Regresar">
-				<md-icon class="material-icons">arrow_back</md-icon>
-			</md-button>
-			<h2><span>Registro</span></h2>
-			<span flex></span>
-			<md-button class="md-icon-button" title="Deshacer" > 
-				<md-icon class="material-icon">undo</md-icon>
-			</md-button>
-			<md-button class="md-icon-button" title="Siguiente"> 
-				<md-icon class="material-icon">arrow_forward</md-icon>
-			</md-button>
-		</div>
-	</md-toolbar>
-	<!--CONTENT-->
-	<md-content layout-padding>
-		<form  name="parentsForm" layout-padding autocomplete="false">
-			-Datos del Padre hola
-			-
-			<!--FATHER-->
-			<md-input-container class="md-block md-accent">
-				<label>Nombre </label>
-				<input type="text" name="fatherName" ng-required="true" ng-minlength="3"/>
-				<ng-messages for="parentsForm.fatherName.$error" ng-if="parentsForm.fatherName.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container class="md-block md-accent">
-				<label>Apellido </label>
-				<input type="text" name="fatherLastName" ng-required="true" ng-minlength="3"/>
-				<ng-messages for="parentsForm.fatherLastName.$error" ng-if="parentsForm.fatherLastName.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Profesión </label>
-				<input type="text" name="professionF" ng-required="true"/>
-				<ng-messages for="parentsForm.professionF.$error" ng-if="parentsForm.professionF.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Ocupación </label>
-				<input type="text" name="occupationF" ng-required="true"/>
-				<ng-messages for="parentsForm.occupationF.$error" ng-if="parentsForm.occupationF.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Teléfono Particular </label>
-				<input type="number" name="fatherPhoneP" ng-required="true"/>
-				<ng-messages for="parentsForm.fatherPhoneP.$error" ng-if="parentsForm.fatherPhoneP.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Teléfono Movil</label>
-				<input type="number" name="fatherPhoneM" ng-required="true"/>
-				<ng-messages for="parentsForm.fatherPhoneM.$error" ng-if="parentsForm.fatherPhoneM.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Email</label>
-				<input type="email" name="fatherEmail" ng-required="true"/>
-				<ng-messages for="parentsForm.fatherEmail.$error" ng-if="parentsForm.fatherEmail.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<!--MOTHER-->
-			<br>Datos de la Madre<br>
-			<md-input-container class="md-block md-accent">
-				<label>Nombre </label>
-				<input type="text" name="motherName" ng-required="true" ng-minlength="3"/>
-				<ng-messages for="parentsForm.motherName.$error" ng-if="parentsForm.motherName.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container class="md-block md-accent">
-				<label>Apellido </label>
-				<input type="text" name="motherLastName" ng-required="true" ng-minlength="3"/>
-				<ng-messages for="parentsForm.motherLastName.$error" ng-if="parentsForm.motherLastName.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-					<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Profesión </label>
-				<input type="text" name="professionM" ng-required="true"/>
-				<ng-messages for="parentsForm.professionM.$error" ng-if="parentsForm.professionM.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Ocupación </label>
-				<input type="text" name="occupationM" ng-required="true"/>
-				<ng-messages for="parentsForm.occupationM.$error" ng-if="parentsForm.occupationM.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Teléfono Particular </label>
-				<input type="number" name="motherPhoneP" ng-required="true"/>
-				<ng-messages for="parentsForm.motherPhoneP.$error" ng-if="parentsForm.motherPhoneP.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Teléfono Movil</label>
-				<input type="number" name="motherPhoneM" ng-required="true"/>
-				<ng-messages for="parentsForm.motherPhoneM.$error" ng-if="parentsForm.motherPhoneM.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-			<md-input-container>
-				<label>Email</label>
-				<input type="email" name="motherEmail" ng-required="true"/>
-				<ng-messages for="parentsForm.motherEmail.$error" ng-if="parentsForm.motherEmail.$dirty">
-					<ng-message when="required">El campo es obligatorio</ng-message>
-				</ng-messages>
-			</md-input-container>
-		</form>
+
+<div id="scrollArea" ng-controller="userparentsController"> <!--las siguientes dos lineas on par el boton de ir arriba modificado 15 abril 2017 22:22-->
+	<a id="Top"></a>
+	<md-content  layout="column" flex>
+		<md-toolbar layout="row" class="m-accent md-hue-2">
+			<div class="md-toolbar-tools">
+				<md-button class="md-class-button" title="Regresar">
+					<md-icon class="material-icons">arrow_back</md-icon>
+				</md-button>
+				<h2><span>Registro</span></h2>
+				<span flex></span>
+				<md-button class="md-icon-button" title="Deshacer" ng-click="reset(parentsForm)"  tipe="reset">  <!-- Athan: modifique ng-click="reset()" y agregue el tipe="reset" modificado el 15 abril  23:50 -->
+					<md-icon class="material-icon">undo</md-icon>
+				</md-button>
+				<md-button class="md-icon-button" title="Siguiente"> 
+					<md-icon class="material-icon">arrow_forward</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<!--CONTENT-->
+		<md-content layout-padding>
+			<form  name="parentsForm" layout-padding autocomplete="false">
+				-Datos del Padre-
+				<!--FATHER-->
+				<md-input-container class="md-block md-accent">
+					<label>Nombre </label>
+					<input ng-model="user.name" type="text" name="fatherName" ng-required="true" ng-minlength="3"/>
+					<ng-messages for="parentsForm.fatherName.$error" ng-if="parentsForm.fatherName.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+						<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container class="md-block md-accent">
+					<label>Apellido </label>
+					<input ng-model="user.lastname" type="text" name="fatherLastName" ng-required="true" ng-minlength="3"/>
+					<ng-messages for="parentsForm.fatherLastName.$error" ng-if="parentsForm.fatherLastName.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+						<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Profesión </label>
+					<input ng-model="user.professionaf" type="text" name="professionF" ng-required="true"/>
+					<ng-messages for="parentsForm.professionF.$error" ng-if="parentsForm.professionF.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Ocupación </label>
+					<input ng-model="user.ocupationf" type="text" name="occupationF" ng-required="true"/>
+					<ng-messages for="parentsForm.occupationF.$error" ng-if="parentsForm.occupationF.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Teléfono Particular </label>
+					<input ng-model="user.phonep" type="number" name="fatherPhoneP" ng-required="true"/>
+					<ng-messages for="parentsForm.fatherPhoneP.$error" ng-if="parentsForm.fatherPhoneP.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Teléfono Movil</label>
+					<input ng-model="user.phoenm" type="number" name="fatherPhoneM" ng-required="true"/>
+					<ng-messages for="parentsForm.fatherPhoneM.$error" ng-if="parentsForm.fatherPhoneM.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Email</label>
+					<input ng-model="user.email" type="email" name="fatherEmail" ng-required="true"/>
+					<ng-messages for="parentsForm.fatherEmail.$error" ng-if="parentsForm.fatherEmail.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<!--MOTHER-->
+				<br>Datos de la Madre<br>
+				<md-input-container class="md-block md-accent">
+					<label>Nombre </label>
+					<input ng-model="user.mothername" type="text" name="motherName" ng-required="true" ng-minlength="3"/>
+					<ng-messages for="parentsForm.motherName.$error" ng-if="parentsForm.motherName.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+						<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container class="md-block md-accent">
+					<label>Apellido </label>
+					<input ng-model="user.motherlastname" type="text" name="motherLastName" ng-required="true" ng-minlength="3"/>
+					<ng-messages for="parentsForm.motherLastName.$error" ng-if="parentsForm.motherLastName.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+						<ng-message when="minlength">El campo debe tener al menos 3 carácteres</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Profesión </label>
+					<input ng-model="user.professionm" type="text" name="professionM" ng-required="true"/>
+					<ng-messages for="parentsForm.professionM.$error" ng-if="parentsForm.professionM.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Ocupación </label>
+					<input ng-model="user.ocupationm" type="text" name="occupationM" ng-required="true"/>
+					<ng-messages for="parentsForm.occupationM.$error" ng-if="parentsForm.occupationM.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Teléfono Particular </label>
+					<input ng-model="user.motherphonep" type="number" name="motherPhoneP" ng-required="true"/>
+					<ng-messages for="parentsForm.motherPhoneP.$error" ng-if="parentsForm.motherPhoneP.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Teléfono Movil</label>
+					<input ng-model="user.motherphonep" type="number" name="motherPhoneM" ng-required="true"/>
+					<ng-messages for="parentsForm.motherPhoneM.$error" ng-if="parentsForm.motherPhoneM.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+				<md-input-container>
+					<label>Email</label>
+					<input ng-model="user.motheremail" type="email" name="motherEmail" ng-required="true"/>
+					<ng-messages for="parentsForm.motherEmail.$error" ng-if="parentsForm.motherEmail.$dirty">
+						<ng-message when="required">El campo es obligatorio</ng-message>
+					</ng-messages>
+				</md-input-container>
+			</form>
+		</md-content>	
 	</md-content>
-	<md-button class="md-fab md-raised" title="Principio de Pag." >
-			<md-icon class="material-icon" sytle="color:redlight">keyboard_arrow_up</md-icon>
-	</md-button>
-</md-content>
+	
+	<!-- boton para ir arriba modificado 15 abril 2017 22:22-->
+	<button class="md-fab md-fab-bottom-right docs-scroll-fab md-button md-ink-ripple" docs-scroll-class="scrolling"  ng-click="gotoTop()" aria-label="Back to Top">
+		<md-icon  class="ng-scope" aria-hidden="true">keyboard_arrow_up</md-icon>
+		<div class="md-panel-outer-wrapper md-panel-is-showing" style="pointer-events: none; z-index: 100;">
+			<md-tooltip md-direction="top">
+				Ir arriba
+			</md-tooltip>
+		</div>
+	</button>
+</div>

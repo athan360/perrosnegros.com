@@ -140,3 +140,30 @@ md-tooltip {
 md-input-container label, md-input-container .md-placeholder {
 	color: rgba(0, 0, 0, 0.4) !important;
 }
+
+
+.docs-tools .md-button.md-icon-button {
+  min-height: 0;
+  height: auto;
+}
+
+.docs-anchor {
+  color: inherit;
+}
+
+.md-fab.docs-scroll-fab {
+  position: fixed !important;
+
+/*  -webkit-transform: scale(0);
+
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;*/
+}
+
+.docs-scroll-fab.scrolling {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
